@@ -50,14 +50,18 @@
         <tbody>
           {% for task in tasks %}
           <tr>
-            <th scope="row">{{forloop.counter}}</th>
+            <td>{{forloop.counter}}</td>
             <td>{{task.listTitle}}</td>
             <td>{{task.listDes}}</td>
             <td>
               <a href="{% url 'delete' task.listDes %}">
                 <button type="button" class="btn btn-danger btn">Delete</button>
               </a>
-              {% comment %} <button type="button" class="btn btn-primary btn">Update</button> {% endcomment %}
+              <a>
+                <button type="button" class="btn btn-primary btn">
+                  Completed
+                </button>
+              </a>
             </td>
             {% comment %}
             <td>@mdo</td>

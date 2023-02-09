@@ -1,3 +1,4 @@
+{% load static %}
 <!DOCTYPE html>
 <html lang="en">
   <head>
@@ -12,7 +13,7 @@
       integrity="sha384-EVSTQN3/azprG1Anm3QDgpJLIm9Nao0Yz1ztcQTwFspd3yD65VohhpuuCOmLASjC"
       crossorigin="anonymous"
     />
-
+    <link rel="stylesheet" type="text/css" href="{% static 'style.css' %}">
     <title>Hello, world!</title>
   </head>
 
@@ -65,7 +66,7 @@
         <div class="mb-3">
           <label for="desc" class="form-label">Add list</label>
           <textarea
-            class="form-control"
+            class="form-control gg"
             name="desc"
             id="desc"
             cols="30"

@@ -23,3 +23,5 @@ def delete(request,name):
     list.objects.filter(listDes=name).delete()
     return redirect('todolist')
 
+def profile(request):
+    return render(request,"profile.html")
