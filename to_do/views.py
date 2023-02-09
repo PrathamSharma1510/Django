@@ -14,7 +14,7 @@ def home(request):
 
 def todolist(request):
     alltask=list.objects.all()
-    for items in alltask:
-        print(items.listDes)
+    # for items in alltask:
+    #     print(items.listDes)
     context={'tasks':alltask}
     return render(request, 'list.html',context)
