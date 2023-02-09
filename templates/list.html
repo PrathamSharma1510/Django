@@ -24,17 +24,25 @@
             <th scope="col">Number</th>
             <th scope="col">Name</th>
             <th scope="col">Description</th>
-            <th scope="col">time</th>
+            <th scope="col">Update list</th>
           </tr>
         </thead>
         <tbody>
           {% for task in tasks %}
-            <tr>
-                <th scope="row">{{forloop.counter}}</th>
-                <td>{{task.listTitle}}</td>
-                <td>{{task.listDes}}</td>
-                {% comment %} <td>@mdo</td> {% endcomment %}
-            </tr>
+          <tr>
+            <th scope="row">{{forloop.counter}}</th>
+            <td>{{task.listTitle}}</td>
+            <td>{{task.listDes}}</td>
+            <td>
+              <a href="{% url 'delete' task.listDes %}">
+                <button type="button" class="btn btn-danger btn">Delete</button>
+              </a>
+              <button type="button" class="btn btn-primary btn">Update</button>
+            </td>
+            {% comment %}
+            <td>@mdo</td>
+            {% endcomment %}
+          </tr>
           {% endfor %}
         </tbody>
       </table>

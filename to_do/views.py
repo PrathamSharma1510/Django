@@ -1,4 +1,4 @@
-from django.shortcuts import render,HttpResponse
+from django.shortcuts import render,HttpResponse,redirect
 from to_do.models import list
 # Create your views here.
 def home(request):
@@ -18,3 +18,8 @@ def todolist(request):
     #     print(items.listDes)
     context={'tasks':alltask}
     return render(request, 'list.html',context)
+
+def delete(request,name):
+    list.objects.filter(listDes=name).delete()
+    return redirect('todolist')
+

@@ -19,5 +19,6 @@ from to_do import views
 urlpatterns = [
     # path('admin/', admin.site.urls),
     path('', views.home,name='home'),
-    path('todolist',views.todolist,name='todolist')
+    path('todolist',views.todolist,name='todolist'),
+    path('delete/<str:name>',views.delete,name='delete')
 ]
