@@ -18,8 +18,8 @@ from django.urls import path, include
 from to_do import views
 urlpatterns = [
     # path('admin/', admin.site.urls),
-    path('', views.home,name='home'),
+    path('add', views.home,name='home'),
     path('todolist',views.todolist,name='todolist'),
-    path('profile',views.profile,name='delete'),
+    path('',views.profile,name='delete'),
     path('delete/<str:name>',views.delete,name='delete')
 ]
