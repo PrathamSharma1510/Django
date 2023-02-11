@@ -17,7 +17,7 @@
   <meta name="description" content="">
   <meta name="keywords" content="html, css, javascript, jquery">
   <meta name="author" content="">
-  <link rel="shortcut icon" type="image/jpg" href=" {% static 'images/rakesh.png' %} " />
+  <link rel="shortcut icon" type="image/jpg" href=" {% static 'images/svg/pratham.png' %} " />
   <link rel="stylesheet" href=" {% static 'css/vendor/icomoon/style.css' %} ">
   <link rel="stylesheet" href=" {% static 'css/vendor/owl.carousel.min.css' %} ">
   <link rel="stylesheet" href=" {% static 'css/vendor/animate.min.css' %} ">
@@ -96,7 +96,8 @@
       </nav>
       <!-- END nav -->
       <!-- jarallax -->
-      <div class="cover-v1" style="background-image: url(' {% static 'images/svg/' %} ');" id="home-section">
+      {% comment %} style="background-image: url(' {% static 'images/svg/pratham.png' %} ');" {% endcomment %}
+      <div class="cover-v1"  id="home-section">
         <div class="container">
           <div class="row align-items-center">
             <div class="col-md-7 mx-auto text-center">
@@ -109,7 +110,7 @@
         </div>
 
 
-        <a href=" {% static '#portfolio-section' %} " class="mouse-wrap smoothscroll">
+        <a class="mouse-wrap smoothscroll">
           <span class="mouse">
             <span class="scroll"></span>
           </span>
